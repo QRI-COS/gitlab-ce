@@ -10,6 +10,7 @@ ENV LANG=C.UTF-8
 # Install required packages
 RUN apt-get update -q \
     && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
+      libatomic1 \
       ca-certificates \
       openssh-server \
       wget \
