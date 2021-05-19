@@ -1,13 +1,14 @@
-FROM ubuntu@sha:1de4c5e2d8954bf5fa9855f8b4c9d3c3b97d1d380efe19f60f3e4107a66f5cae
+FROM ubuntu:20.04
 MAINTAINER GitLab Inc. <support@gitlab.com>
 
-SHELL ["/bin/sh", "-c"]
+# SHELL ["/bin/sh", "-c"]
 
 # Default to supporting utf-8
 ENV LANG=C.UTF-8
 
 # Install required packages
-RUN apt-get update -q
+RUN uname -a
+#apt-get update -q
 #  \
 #     && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
 #       ca-certificates \
