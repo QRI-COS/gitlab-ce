@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu@sha:1de4c5e2d8954bf5fa9855f8b4c9d3c3b97d1d380efe19f60f3e4107a66f5cae
 MAINTAINER GitLab Inc. <support@gitlab.com>
 
 SHELL ["/bin/sh", "-c"]
