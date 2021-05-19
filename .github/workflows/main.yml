@@ -42,6 +42,7 @@ jobs:
           outputs: # optional
           # List of target platforms for build
           platforms: # optional
+            - linux/arm64
           # Always attempt to pull a newer version of the image
           pull: # optional, default is false
           # Push is a shorthand for --output=type=registry
