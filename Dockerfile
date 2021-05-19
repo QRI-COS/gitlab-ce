@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 MAINTAINER GitLab Inc. <support@gitlab.com>
 
-SHELL ["/bin/bash", "-c"],
+SHELL ["/bin/sh", "-c"],
 
 # Default to supporting utf-8
 ENV LANG=C.UTF-8
