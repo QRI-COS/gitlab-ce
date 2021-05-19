@@ -1,24 +1,23 @@
 FROM ubuntu:20.04
+
 MAINTAINER GitLab Inc. <support@gitlab.com>
 
-# SHELL ["/bin/sh", "-c"]
+SHELL ["/bin/sh", "-c"]
 
 # Default to supporting utf-8
 ENV LANG=C.UTF-8
 
 # Install required packages
-RUN uname -a
-#apt-get update -q
-#  \
-#     && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
-#       ca-certificates \
-#       openssh-server \
-#       wget \
-#       vim \
-#       tzdata \
-#       nano \
-#       less \
-#     && rm -rf /var/lib/apt/lists/*
+RUN apt-get update -q \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
+      ca-certificates \
+      openssh-server \
+      wget \
+      vim \
+      tzdata \
+      nano \
+      less \
+    && rm -rf /var/lib/apt/lists/*
 
 # Remove MOTD
 RUN rm -rf /etc/update-motd.d /etc/motd /etc/motd.dynamic
