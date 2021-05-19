@@ -7,16 +7,17 @@ SHELL ["/bin/sh", "-c"],
 ENV LANG=C.UTF-8
 
 # Install required packages
-RUN apt-get update -q \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
-      ca-certificates \
-      openssh-server \
-      wget \
-      vim \
-      tzdata \
-      nano \
-      less \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update -q
+#  \
+#     && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
+#       ca-certificates \
+#       openssh-server \
+#       wget \
+#       vim \
+#       tzdata \
+#       nano \
+#       less \
+#     && rm -rf /var/lib/apt/lists/*
 
 # Remove MOTD
 RUN rm -rf /etc/update-motd.d /etc/motd /etc/motd.dynamic
