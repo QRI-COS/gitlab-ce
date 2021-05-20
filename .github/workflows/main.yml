@@ -25,4 +25,4 @@ jobs:
         with:
           platforms: linux/arm64
           push: true
-          tags: jenderleqri/gitlab-ce:latest
+          tags: jenderleqri/gitlab-ce:arm64
